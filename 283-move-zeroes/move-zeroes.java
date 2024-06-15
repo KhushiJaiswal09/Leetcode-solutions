@@ -12,12 +12,14 @@ class Solution {
                 arr.add(nums[i]);
             }
         }
-         for( int i=0; i<nums.length-count; i++){
+         for( int i=0; i<nums.length; i++){
+            if(i<nums.length-count){
             nums[i]=arr.get(i);
+            }else{
+                nums[i]=0;
+            }
          }
-          for( int i=nums.length-count; i<nums.length; i++){
-            nums[i]=0;
-    }
+         
 
   //  return nums;
 }}
