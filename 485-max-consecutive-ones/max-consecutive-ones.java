@@ -9,12 +9,10 @@ class Solution {
             if(nums[i]==1){
                 count++;
             }
-        
-            result=Math.max(result, count);    
-
-            if(nums[i]==0 ){
+            else if(nums[i]==0 ){
                 count=0;           
-            }   
+            }
+            result=Math.max(result, count);     
         }
         return result;
     }
