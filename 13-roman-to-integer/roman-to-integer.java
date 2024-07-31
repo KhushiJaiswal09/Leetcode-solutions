@@ -1,22 +1,24 @@
 class Solution {
-  public int romanToInt(String s) {
-    int ans = 0;
-    int[] roman = new int[128];
-
-    roman['I'] = 1;
-    roman['V'] = 5;
-    roman['X'] = 10;
-    roman['L'] = 50;
-    roman['C'] = 100;
-    roman['D'] = 500;
-    roman['M'] = 1000;
-
-    for (int i = 0; i + 1 < s.length(); ++i)
-      if (roman[s.charAt(i)] < roman[s.charAt(i + 1)])
-        ans -= roman[s.charAt(i)];
-      else
-        ans += roman[s.charAt(i)];
-
-    return ans + roman[s.charAt(s.length() - 1)];
-  }
+    public int romanToInt(String s) {
+        int result=0;
+        int num=0;
+        for(int i=s.length()-1; i>=0; i--){
+            switch(s.charAt(i)){
+                case 'I': num = 1; break;
+                case 'V': num = 5; break;
+                case 'X': num = 10; break;
+                case 'L': num = 50; break;
+                case 'C': num = 100; break;
+                case 'D': num = 500; break;
+                case 'M': num = 1000; break;
+            }
+            if(4*num<result){
+                result-=num;
+            }
+            else{
+                result+=num;
+            }
+        }
+  return result;
+    }
 }
