@@ -1,5 +1,6 @@
 class Solution {
     public int removeElement(int[] nums, int val) {
+        
         int count =0;
         ArrayList<Integer> arr=new ArrayList<>();
 
