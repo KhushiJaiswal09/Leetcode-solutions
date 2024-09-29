@@ -10,7 +10,7 @@ class Solution {
 
             while(n!=0){
                 
-                sum +=Math.pow(n%10, 2);
+                sum +=((n%10)*(n%10));
                 n=n/10;                                                                                        
             }
 
