@@ -2,8 +2,8 @@ class Solution {
   public int trap(int[] height) {
     final int n = height.length;
     int ans = 0;
-    int[] l = new int[n]; // l[i] := max(height[0..i])
-    int[] r = new int[n]; // r[i] := max(height[i..n))
+    int[] l = new int[n]; 
+    int[] r = new int[n]; 
 
     for (int i = 0; i < n; ++i)
       l[i] = i == 0 ? height[i] : Math.max(height[i], l[i - 1]);
