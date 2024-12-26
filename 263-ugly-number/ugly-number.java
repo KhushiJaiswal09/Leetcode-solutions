@@ -1,6 +1,7 @@
 class Solution {
     public boolean isUgly(int n) {
-       if (n <= 0) return false; 
+        
+        if (n <= 0) return false; 
 
         while (n!=1)
         {
@@ -9,9 +10,7 @@ class Solution {
             else if (n % 5 == 0) n /= 5;
             else return false;
         }
-         
-        
-        
+            
         return true;
     
     }
