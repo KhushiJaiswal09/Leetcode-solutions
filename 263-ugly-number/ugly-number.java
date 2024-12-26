@@ -12,7 +12,7 @@ class Solution {
          
         
         
-        return n == 1;
+        return true;
     
     }
 }
